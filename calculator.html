@@ -1,0 +1,115 @@
+<html>
+	<head>
+		<title>C@1CU1@TOR</title>
+		<link rel="stylesheet" type="text/css" href="calculator.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="Pelfusion-Long-Shadow-Media-Calculator.ico">
+		
+	</head>
+	
+	<body onload="alert('!!!!Instructions!!!!\n\nClick on the yellow bar on the bottom for more options. In order to change the color of a particular row in History, enter the color code or name in the text box provided in each row under the column with the name Color.\n\n!!!!!!!Abbreviations!!!!!!!!!\n\nB - Backspace\nC - Clear Screen\nR - Remainder\nA - Answer\nI - Invert sign' )">
+		
+		<div id="entire">
+			<div id="header">Calculator mode activated</div>
+			<div id="alter">
+				<input type="text" name="one" id="one" />
+				<input type="text" name="two" id="two" />
+				<div id="result"></div>
+				<input type="button" value="Compute" id="buton" />
+			</div>
+			<form name="cal">
+				<div class="screen">
+					<input type="text" name="display" id="display" />
+					<input type="text" name="output" id="output" />
+				</div>
+				
+				<div id="buttons">
+					<div id="b">
+					
+						<input type="button" class ="c" id="oper" value=" B " onclick="back();document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" id="oper" value=" C " onclick="cal.display.value ='';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" id="oper" value=" ^ " onclick="cal.display.value +='^';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" id="oper" value=" % " onclick="per();document.getElementById('display').style.color = 'rgb(102, 178, 255)';"/>
+						<input type="button" class ="c" id="oper" value=" / " onclick="cal.display.value +='/';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						
+						<br>
+						
+						<input type="button" class ="c" id="oper" value=" R " onclick="cal.display.value +='%';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 7 " onclick="check();cal.display.value +='7';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 8 " onclick="check();cal.display.value +='8';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 9 " onclick="check();cal.display.value +='9';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" id="oper" value=" X " onclick="cal.display.value +='*';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<br>
+						
+						<input type="button" class ="c" id="oper" value=" I " onclick="inv()" />
+						<input type="button" class ="c" value=" 4 " onclick="check();cal.display.value +='4';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 5 " onclick="check();cal.display.value +='5';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 6 " onclick="check();cal.display.value +='6';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" id="oper" value=" - " onclick="cal.display.value +='-';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';"/>
+						<br>
+						
+						<input type="button" class ="c" id="oper" value=" ( " onclick="check();cal.display.value +='(';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 1 " onclick="check();cal.display.value +='1';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 2 " onclick="check();cal.display.value +='2';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 3 " onclick="check();cal.display.value +='3';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" id="oper" value=" + " onclick="cal.display.value +='+';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<br>
+						
+						<input type="button" class ="c" id="oper" value=" ) " onclick="check();cal.display.value +=')';cal.output.value='';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" . " onclick="check();cal.display.value +='.';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" 0 " onclick="check();cal.display.value +='0';document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="c" value=" A "  onclick="cal.display.value='Ans';cal.output.value=Ans;document.getElementById('display').style.color = 'rgb(102, 178, 255)';" />
+						<input type="button" class ="e" id="oper" value=" = " onclick="power();Ans=cal.output.value;cal.display.value='Ans';document.getElementById('display').style.color = '#00838F';" />
+						<br>
+
+					</div>
+					
+				<div id="bar">
+					<div id="more">More options</div>
+					<input type="button" id="calc" class="op" value="Calculator" />
+					<input type="button" id="lcm" class="op" value="LCM" />
+					<input type="button" id="hcf" class="op" value="HCF"/>
+					<input type="button" id="hist" class="op" value="History"/>
+				</div>	
+				</div>
+				
+				
+			</form>
+			<div id="cover"></div>
+		</div>
+	
+		<div id="histy">
+			<div id="tablc">
+				<table id="tabc">
+					<th>S.No.</th>
+					<th colspan="3">Requested calculation</th>
+					<th>Answer</th>
+					<th>Color</th>
+				</table>
+			</div>
+
+			<div id="tabll">
+				<table id="tabl">
+					<th>S.No.</th>
+					<th>First No.</th>
+					<th>Second No.</th>
+					<th>Answer</th>
+					<th>Color</th>
+				</table>
+			</div>
+
+			<div id="tablh">
+				<table id="tabh">
+					<th>S.No.</th>
+					<th>First No.</th>
+					<th>Second No.</th>
+					<th>Answer</th>
+					<th>Color</th>			
+				</table>
+			</div>
+		</div>
+	<script src="jquery-1.11.3.js" ></script>
+	<script src="calculator.js"></script>
+	</body>
+	
+</html>
