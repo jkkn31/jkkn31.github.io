@@ -1,0 +1,42 @@
+.no-margin
+{
+	margin:0px;
+}
+.no-padding
+{
+	padding:0px;
+}
+.my
+{
+	background-color: #99e6ff;
+
+
+}
+.mynav
+{
+	background-color: #cc80ff;
+	color:red;
+	margin:0;
+	font-style: bold;
+	padding:0px;
+
+	
+	
+
+}
+.mp {
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+
+    
+}
+.kk
+{
+	width: 100%;
+    border: none;
+    padding: 30px;
+
+}
+
+
