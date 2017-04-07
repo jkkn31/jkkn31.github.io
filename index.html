@@ -60,7 +60,7 @@
 
 					<div class="col-md-6">
 						<div class="card shadow">
-							<h4 class="card-header">Runs <span class="tag tag-info" id="revenue-tag">18,462</span></h4>
+							<h4 class="card-header">Runs <span class="tag tag-info" id="tr1"></span></h4>
 							<div class="card-block">
 								<div id="orders-spline-chart"></div>
 							</div>
@@ -200,6 +200,24 @@
 				
 				revenueColumnChart.render();
 				
+				var totalruns=  [
+						    	{ x: new Date("2000"), y: 600 },
+								{ x: new Date("2001"), y: 673 },
+								{ x: new Date("2002"), y: 720 },
+								{ x: new Date("2003"), y: 302 },
+								{ x: new Date("2004"), y: 453 },
+								{ x: new Date("2005"), y: 750 },
+								{ x: new Date("2006"), y: 900 },
+								{ x: new Date("2007"), y: 700 },
+								{ x: new Date("2008"), y: 1200},
+								{ x: new Date("2009"), y: 1300 },
+								{ x: new Date("2010"), y: 350 },
+								{ x: new Date("2011"), y: 280 },
+								{ x: new Date("2012"), y: 400 },
+								{ x: new Date("2013"), y: 640 },
+								{ x: new Date("2014"), y: 780 },
+								{ x: new Date("2015"), y: 950 },
+							]
 				
 					
 				//CanvasJS spline chart to show 
@@ -225,28 +243,23 @@
 					data: [
 						{
 							type: "spline",
-							dataPoints: [
-						    	{ x: new Date("2000"), y: 600 },
-								{ x: new Date("2001"), y: 673 },
-								{ x: new Date("2002"), y: 720 },
-								{ x: new Date("2003"), y: 302 },
-								{ x: new Date("2004"), y: 453 },
-								{ x: new Date("2005"), y: 750 },
-								{ x: new Date("2006"), y: 900 },
-								{ x: new Date("2007"), y: 700 },
-								{ x: new Date("2008"), y: 1200},
-								{ x: new Date("2009"), y: 1300 },
-								{ x: new Date("2010"), y: 350 },
-								{ x: new Date("2011"), y: 280 },
-								{ x: new Date("2012"), y: 400 },
-								{ x: new Date("2013"), y: 640 },
-								{ x: new Date("2014"), y: 780 },
-								{ x: new Date("2015"), y: 950 },
-							]
+							dataPoints: totalruns
 						}
 					]
 				});
 
+				var tr =0;
+ 				for(var j=0;j<totalruns.length;j++){
+ 					if(j==totalruns.length - 1){
+ 						tr += totalruns[j].y;
+ 					
+ 						$("#tr1").html(tr);
+ 					}
+ 					else{
+ 						tr+=totalruns[j].y;
+ 					}
+ 				}
+				
 				ordersSplineChart.render();
 				
 			});
