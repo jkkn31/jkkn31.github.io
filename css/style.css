@@ -45,7 +45,8 @@ h2{
 
 .countries{
 	text-align: center;
-	padding: 80px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	transition: all 0.3s ease;
 	margin-top: 20px;
 	background:white;
