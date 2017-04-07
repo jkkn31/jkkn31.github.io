@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard - Sachin</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="navB">
+		<img src="images/logo.png" height="80px">
+		<h4 id="title">Sachin Tendulkar</h4>
+	</div>
+	<div class="container">
+		<div id="overlay"></div>
+		<div class="row">
+			<div class="col-sm-8 card">
+				<div class="row">
+					<div class="col-sm-4">
+						<img src="images/logo.png" height="100px">
+					</div>
+					<div class="col-sm-8">
+						<h4>About</h4>
+						<p>lfklgkkrgflkdlglgkdlk ldfkgl fdlkg ldkg lklg kldfk gldkf glkflgkpe[ewpr[pwe[p [p we[p rekeldklgkfdlkg ldk dlfkg l</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4 card">
+				<h4>Stats</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row col-sm-12">
+				<div class="col-sm-4 card countries">
+					<h4>Australia</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-sm-4 card countries">
+					<h4>South Africa</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-sm-4 card countries">
+					<h4>Pakistan</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+			</div>
+			<div class="row col-sm-12">
+				<div class="col-sm-4 card countries">
+					<h4>West Indies</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-sm-4 card countries">
+					<h4>New Zealand</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-sm-4 card countries">
+					<h4>Zimbabwe</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		var cont;
+		$('.countries').click(function(){
+			$('#overlay').fadeIn();
+			$('.actiC > p').css({"display":"none"});
+			$('.countries').removeClass('actiC');
+			$(this).addClass('actiC');
+			cont = $('.actiC > h4').html();
+			$('.actiC > p').css({"display":"block"});
+			$('.actiC > h4').html("Runs");
+			$('.actiC > .cls').css({'display':'block'});
+		});
+		$('#overlay').click(function(){
+			$('.actiC > h4').html(cont);
+			$('.actiC > p').css({"display":"none"});
+			$('.countries').removeClass('actiC');
+			$(this).fadeOut();
+		})
+	</script>
+
+	var myBarChart = new Chart(ctx, {
+    type: 'bar',
+    data: data,
+    options: options
+});
+
+var data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "My First dataset",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+            data: [65, 59, 80, 81, 56, 55, 40],
+        }
+    ]
+};
+</body>
+</html>

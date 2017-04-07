@@ -1,41 +1,262 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Welcome</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<title>Dashboard - Sachin</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+		<title>Sachin Tendulkar</title>
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="assets/bootstrap/bootstrap4-alpha3.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">		
+		<!-- Scripts -->
 </head>
 <body>
-<nav class="navbar navbar-inverse" role="navigation">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Krishna</a>
-	
-	<div class="navbar-header navbar-right">
-		<ul class="nav navbar-nav">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="index.html">About</a></li>
-			<li><a href="index.html">Contact us</a></li>
-		    <li class="dropdown-menu">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Krishna<b class="caret"></b></a>
-			<ul class="dropdown-menu">
-				<li><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li class="divider"></li>
-				<li><a href="#">separated link</a></li>
-				<li class="divider"></li>
-				<li><a href="#">one more separated link</a></li>
-			</ul>
-		    </li>
-		</ul>	
-    </div>
-
-		
+	<div id="navB" >
+		<img src="images/logo.png" height="80px">
+		<h4 id="title">Sachin Tendulkar</h4>
 	</div>
-</nav>
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-</body>
+	<div class="container">
+		<div id="overlay"></div>
 
+		<h2 id="header">
+			<strong>About</strong>
+			<!-- <small class="text-muted">2000-2015</small> -->
+		</h2>
+		<div class="row card1">
+					<div class="col-md-4 photS">
+
+					</div>
+					<div class="col-md-8">
+						<p>(born April 24, 1973) is an Indian cricketer, widely considered to be one of the greatest batsmen of all time. He currently holds the records for the most cumulative runs in One-Day Internationals, and the most number of centuries scored in both One-day Internationals and Test cricket. He made his international debut against Pakistan in 1989 at the age of sixteen, becoming India's youngest Test player. Although primarily a top-order batsman, Tendulkar has often proved to be a useful and effective slow bowler. He received India's highest sporting honour, the Rajiv Gandhi Khel Ratna in the year 1997-1998 and the civilian award Padma Shri in 1999. His cricketing and batting abilities are widely regarded as genius by many stalwarts of the game. For instance, Sir Donald Bradman, the Australian great said of Sachin, "He reminds me of myself". He is affectionately known as The Little Master by his adoring fans. On 23 December 2012, Tendulkar announced his retirement from ODIs and from Twenty20 format in May 2013. He retired from cricket on 16th November 2013 after playing his 200th Test match, against the West Indies in Mumbai's Wankhede Stadium. Following the end of his final match, the Prime Minister's Office on 16 November declared Bharat Ratna, the highest civilian honour, making him the first sportsperson and youngest to receive it.</p>
+					</div>
+				
+		
+			
+		</div>
+		<hr>	
+		<h2 id="header">
+			<strong>Statistics</strong>
+			<small class="text-muted">2000-2015</small>
+		</h2>
+		<div class="row">
+				
+				<div class="row m-b-1">
+					<div class="col-md-6">
+						<div class="card shadow">
+							<h4 class="card-header">Average <span class="tag tag-success" id="revenue-tag">53.78</span></h4>
+							<div class="card-block">
+								<div id="revenue-column-chart"></div>
+							</div>
+						</div>
+					</div>
+				 <!-- row -->
+
+				
+					
+
+					<div class="col-md-6">
+						<div class="card shadow">
+							<h4 class="card-header">Runs <span class="tag tag-info" id="revenue-tag">18,462</span></h4>
+							<div class="card-block">
+								<div id="orders-spline-chart"></div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- row -->
+			</div> <!-- container -->
+		<hr>
+		<h2 id="header">
+			<strong>Records</strong>
+			<small class="text-muted">Various Formats</small>
+		</h2>
+		<div class="row card1">
+			<div class="row col-sm-12">
+				<div class="col-md-4 card1 countries">
+					<h4>Australia</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-md-4 card1 countries">
+					<h4>South Africa</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-md-4 card1 countries">
+					<h4>Pakistan</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+			</div>
+			<div class="row col-sm-12">
+				<div class="col-md-4 card1 countries">
+					<h4>West Indies</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-md-4 card1 countries">
+					<h4>New Zealand</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+				<div class="col-md-4 card1 countries">
+					<h4>Zimbabwe</h4>
+					<p>
+						ODI: 7000<br>
+						T20: 8000<br>
+						Test: 9000
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="row center card1 footer">
+			<h5>&copy All rights reserved.</h5>
+		</div>
+		<script src="assets/jquery/jquery-3.1.0.min.js"></script>
+		<script src="assets/tether/tether.min.js"></script>
+		<script src="assets/bootstrap/bootstrap4-alpha3.min.js"></script>
+		<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	
+		<script>
+			$(function () {
+				var totalRuns = 18888877;
+			
+				// CanvasJS column chart
+				var revenueColumnChart = new CanvasJS.Chart("revenue-column-chart", {
+					animationEnabled: true,
+					backgroundColor: "transparent",
+					theme: "theme2",
+					axisX: {
+						labelFontSize: 14,
+						valueFormatString: "YYYY"
+					},
+					axisY: {
+						labelFontSize: 14,
+						prefix: ""
+					},
+					toolTip: {
+						borderThickness: 0,
+						cornerRadius: 0
+					},
+					data: [
+						{
+							type: "column",
+						
+					
+							dataPoints: [
+						    	{ x: new Date("2000"), y: 60.0 },
+								{ x: new Date("2001"), y: 67.3 },
+								{ x: new Date("2002"), y: 72.0 },
+								{ x: new Date("2003"), y: 30.2 },
+								{ x: new Date("2004"), y: 45.3 },
+								{ x: new Date("2005"), y: 75.0 },
+								{ x: new Date("2006"), y: 90.0 },
+								{ x: new Date("2007"), y: 70.0 },
+								{ x: new Date("2008"), y: 120.0},
+								{ x: new Date("2009"), y: 130.0 },
+								{ x: new Date("2010"), y: 35.0 },
+								{ x: new Date("2011"), y: 28.0 },
+								{ x: new Date("2012"), y: 40.0 },
+								{ x: new Date("2013"), y: 64.0 },
+								{ x: new Date("2014"), y: 78.0 },
+								{ x: new Date("2015"), y: 95.0 },
+							]
+						}
+					]
+				});
+
+ 				-->
+
+				
+				revenueColumnChart.render();
+				
+				
+					
+				//CanvasJS spline chart to show 
+				var ordersSplineChart = new CanvasJS.Chart("orders-spline-chart", {
+					animationEnabled: true,
+					backgroundColor: "transparent",
+					theme: "theme2",
+					toolTip: {
+						borderThickness: 0,
+						cornerRadius: 0
+					},
+					axisX: {
+						labelFontSize: 14,
+						maximum: new Date("31 Dec 2015"),
+						valueFormatString: "MMM YYYY"
+					},
+					axisY: {
+						gridThickness: 0,
+						labelFontSize: 14,
+						lineThickness: 2
+					},
+					data: [
+						{
+							type: "spline",
+							dataPoints: [
+						    	{ x: new Date("2000"), y: 600 },
+								{ x: new Date("2001"), y: 673 },
+								{ x: new Date("2002"), y: 720 },
+								{ x: new Date("2003"), y: 302 },
+								{ x: new Date("2004"), y: 453 },
+								{ x: new Date("2005"), y: 750 },
+								{ x: new Date("2006"), y: 900 },
+								{ x: new Date("2007"), y: 700 },
+								{ x: new Date("2008"), y: 1200},
+								{ x: new Date("2009"), y: 1300 },
+								{ x: new Date("2010"), y: 350 },
+								{ x: new Date("2011"), y: 280 },
+								{ x: new Date("2012"), y: 400 },
+								{ x: new Date("2013"), y: 640 },
+								{ x: new Date("2014"), y: 780 },
+								{ x: new Date("2015"), y: 950 },
+							]
+						}
+					]
+				});
+
+				ordersSplineChart.render();
+				
+			});
+		</script>
+		<script type="text/javascript">
+			var cont;
+			$('.countries').click(function(){
+				$('#overlay').fadeIn();
+				$('.actiC > p').css({"display":"none"});
+				$('.countries').removeClass('actiC');
+				$(this).addClass('actiC');
+				cont = $('.actiC > h4').html();
+				$('.actiC > p').css({"display":"block"});
+				$('.actiC > h4').html("Runs");
+				$('.actiC > .cls').css({'display':'block'});
+			});
+			$('#overlay').click(function(){
+				$('.actiC > h4').html(cont);
+				$('.actiC > p').css({"display":"none"});
+				$('.countries').removeClass('actiC');
+				$(this).fadeOut();
+			})
+		</script>
+</body>
 </html>
