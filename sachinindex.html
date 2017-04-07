@@ -60,7 +60,7 @@
 
 					<div class="col-md-6">
 						<div class="card shadow">
-							<h4 class="card-header">Runs <span class="tag tag-info" id="revenue-tag">18,462</span></h4>
+							<h4 class="card-header">Runs <span class="tag tag-info" id="tr1"></span></h4>
 							<div class="card-block">
 								<div id="orders-spline-chart"></div>
 							</div>
@@ -189,31 +189,7 @@
 				
 				revenueColumnChart.render();
 				
-				
-					
-				//CanvasJS spline chart to show 
-				var ordersSplineChart = new CanvasJS.Chart("orders-spline-chart", {
-					animationEnabled: true,
-					backgroundColor: "transparent",
-					theme: "theme2",
-					toolTip: {
-						borderThickness: 0,
-						cornerRadius: 0
-					},
-					axisX: {
-						labelFontSize: 14,
-						maximum: new Date("31 Dec 2015"),
-						valueFormatString: "MMM YYYY"
-					},
-					axisY: {
-						gridThickness: 0,
-						labelFontSize: 14,
-						lineThickness: 2
-					},
-					data: [
-						{
-							type: "spline",
-							dataPoints: [
+				var totalruns=  [
 						    	{ x: new Date("2000"), y: 600 },
 								{ x: new Date("2001"), y: 673 },
 								{ x: new Date("2002"), y: 720 },
@@ -231,10 +207,48 @@
 								{ x: new Date("2014"), y: 780 },
 								{ x: new Date("2015"), y: 950 },
 							]
+				
+					
+				//CanvasJS spline chart to show 
+				var ordersSplineChart = new CanvasJS.Chart("orders-spline-chart", {
+					animationEnabled: true,
+					backgroundColor: "transparent",
+					theme: "theme2",
+					toolTip: {
+						borderThickness: 0,
+						cornerRadius: 0
+					},
+					axisX: {
+						labelFontSize: 14,
+						maximum: new Date("31 Dec 2015"),
+						valueFormatString: "MMM YYYY"
+
+					},
+					axisY: {
+						gridThickness: 0,
+						labelFontSize: 14,
+						lineThickness: 2
+					},
+					data: [
+						{
+							type: "spline",
+							dataPoints: totalruns
 						}
 					]
 				});
 
+				var tr =0;
+ 				for(var j=0;j<totalruns.length;j++){
+ 					if(j==totalruns.length - 1){
+ 						tr += totalruns[j].y;
+ 					
+ 						$("#tr1").html(tr);
+ 					}
+ 					else{
+ 						tr+=totalruns[j].y;
+ 					}
+ 				}
+				
 				ordersSplineChart.render();
 				
 			});
